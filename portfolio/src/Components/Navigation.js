@@ -58,14 +58,38 @@ const NavigationStyled = styled.nav`
         }
     }
 
-    .nav-item{
+    .nav-items{
         width: 100%;
         text-align: center;
-
+        .active-class{
+            background-color: var(--primary-color);
+        }
         li{
             display: block;
             a{
                 display: block;
+                padding: .2rem 0;
+                position: relative;
+                z-index: 4;
+                &:hover{
+                    cursor: pointer;
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 0;
+                    height: 50%;
+                    background-color: var(--primary-color);
+                    transition: All 0.4s cubic-bezier(.67,.11,.06,1);
+                    z-index: 3;
+                    opacity: 0.21;
+                }
+            }
+            a:hover::before{
+                width: 100%;
+                height: 100%;
             }
         }
     }
