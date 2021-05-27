@@ -1,9 +1,11 @@
 import styled from 'styled-components'
+//components
+import Sidebar from './Components/Sidebar'
 
 function App() {
   return (
     <AppStyled>
-      <h1>Styled Components </h1>
+      <Sidebar />
     </AppStyled>
   );
 }
