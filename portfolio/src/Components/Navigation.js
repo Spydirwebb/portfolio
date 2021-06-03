@@ -11,7 +11,7 @@ const Navigation = () => {
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
-                    <NavLink to="/home" activeClassName="active-class">Home</NavLink>
+                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/about" activeClassName="active-class">About</NavLink>
@@ -20,7 +20,7 @@ const Navigation = () => {
                     <NavLink to="/resume" activeClassName="active-class">Resume</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/portfolios" activeClassName="active-class">Portfolios</NavLink>
+                    <NavLink to="/portfolios" activeClassName="active-class">Portfolio</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/blogs" activeClassName="active-class">Blogs</NavLink>

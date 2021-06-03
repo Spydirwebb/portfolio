@@ -3,11 +3,15 @@ import styled from 'styled-components'
 
 const RenameMe = () => {
     return(
-        <div>
+        <RenameMeStyled>
 
-        </div>
+        </RenameMeStyled>
     )
 
 }
+
+const RenameMeStyled = styled.div`
+
+`;
 
 export default RenameMe
