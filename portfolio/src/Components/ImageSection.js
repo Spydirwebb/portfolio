@@ -1,13 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
-import img2 from '../img/img2.jpg'
+import beardedBW from '../img/beardedBW.jpg'
 import PrimaryButton from './PrimaryButton'
 
 const ImageSection = () => {
     return(
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={img2} alt="resume" />
+                <img src={beardedBW} alt="resume" />
             </div>
             <div className="right-content">
                 <h4>I am <span>Lorem Ipsum</span></h4>
@@ -46,6 +46,7 @@ const ImageSectionStyled = styled.div`
     display: flex;
     .left-content{
         width: 100%;
+        height: 50vh;
         img{
             height: 100%;
             width: 90%;

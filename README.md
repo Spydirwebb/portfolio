@@ -9,3 +9,4 @@ https://www.youtube.com/watch?v=tiOChpaiFBc&list=WL
 6/01/21 - 93m23s
 6/02/21 - 120m58s
 6/03/21 - 144m51s
+6/04/21 - 2h54m48s
