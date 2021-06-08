@@ -46,7 +46,7 @@ const ImageSectionStyled = styled.div`
     display: flex;
     .left-content{
         width: 100%;
-        height: 50vh;
+        height: 63vh;
         img{
             height: 100%;
             width: 90%;
