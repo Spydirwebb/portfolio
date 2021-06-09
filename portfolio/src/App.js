@@ -46,7 +46,7 @@ function App() {
 }
 
 const MainContentStyled = styled.main`
-    postiion: relative;
+    position: relative;
     margin-left: 16.3rem;
     min-height: 100vh;
 
