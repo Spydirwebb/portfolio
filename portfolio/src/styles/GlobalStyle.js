@@ -50,7 +50,11 @@ h1{
 span{
     color: var(--primary-color);
 }
-
+h6{
+    color: var(--white-color);
+    font-size: 1.2rem;
+    padding-bottom: .6rem;
+}
 
 `;
 
