@@ -7,41 +7,39 @@ import ProgressBar from './ProgressBar'
 const Skills = () => {
     return(
         <SkillsStyled>
-            <MainLayout>
-                <Title title={'My Skills'} span={'My Skills'} />
-                <InnerLayout>
-                    <div className='skills'>
-                        <ProgressBar 
-                            title={'HTML5'}
-                            width={'70%'}
-                        />
-                        <ProgressBar 
-                            title={'CSS3'}
-                            width={'90%'}
-                        />
-                        <ProgressBar 
-                            title={'JAVASCRIPT'}
-                            width={'85%'}
-                        />
-                        <ProgressBar 
-                            title={'JAVA'}
-                            width={'60%'}
-                        />
-                        <ProgressBar 
-                            title={'PYTHON'}
-                            width={'95%'}
-                        />
-                        <ProgressBar 
-                            title={'React JS'}
-                            width={'75%'}
-                        />
-                        <ProgressBar 
-                            title={'UNITY'}
-                            width={'75%'}
-                        />
-                    </div>
-                </InnerLayout>
-            </MainLayout>
+            <Title title={'My Skills'} span={'My Skills'} />
+            <InnerLayout>
+                <div className='skills'>
+                    <ProgressBar 
+                        title={'HTML5'}
+                        width={'70%'}
+                    />
+                    <ProgressBar 
+                        title={'CSS3'}
+                        width={'90%'}
+                    />
+                    <ProgressBar 
+                        title={'JAVASCRIPT'}
+                        width={'85%'}
+                    />
+                    <ProgressBar 
+                        title={'JAVA'}
+                        width={'60%'}
+                    />
+                    <ProgressBar 
+                        title={'PYTHON'}
+                        width={'95%'}
+                    />
+                    <ProgressBar 
+                        title={'React JS'}
+                        width={'75%'}
+                    />
+                    <ProgressBar 
+                        title={'UNITY'}
+                        width={'75%'}
+                    />
+                </div>
+            </InnerLayout>
         </SkillsStyled>
     )
 
