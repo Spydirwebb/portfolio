@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { MainLayout, InnerLayout } from '../styles/Layouts'
+import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
 import SmallTitle from './SmallTitle'
 import BusinessCenterIcon from '@material-ui/icons/BusinessCenter'
@@ -15,18 +15,18 @@ const Resume = () => {
             <Title title={'Resume'} span={'Resume'} />
             <InnerLayout>
                 <div className="small-title">
-                    <SmallTitle icon={briefcase} title={'Working Experience'} />
+                    <SmallTitle icon={briefcase} title={'Educational Qualifications'} />
                 </div>
                 <div className='resume-content'>
                     <ResumeItem 
-                        year = {'2015-Present'}
-                        title = {'Full Stack Developer'}
+                        year = {'2019-2022'}
+                        title = {'Computer Science Degree'}
                         subTitle = {'Sussex University'}
                         text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
                     <ResumeItem 
-                        year = {'2015-2020'}
-                        title = {'Computer Science Teacher'}
-                        subTitle = {'Microsoft Studios'}
+                        year = {'2015-2017'}
+                        title = {'A - Levels'}
+                        subTitle = {'Church Hill High School'}
                         text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
                     
                     <ResumeItem 
@@ -36,7 +36,7 @@ const Resume = () => {
                         text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
                 </div>
                 <div className="small-title u-small-title-margin">
-                    <SmallTitle icon={school} title={'Education'} />
+                    <SmallTitle icon={school} title={'Work Experience'} />
                 </div>
                 <div className='resume-content'>
                     <ResumeItem 
