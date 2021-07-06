@@ -3,8 +3,9 @@ image:
 
 tasks:
   - init: npm install
+    command: cd portfolio
     command: yarn start
 
 vscode:
   extensions:
-    - jpoissonnier.vscode-styled-components@1.6.3:ca84569824e615279332642c4f273e98
+    - jpoissonnier.vscode-styled-components@1.6.3
