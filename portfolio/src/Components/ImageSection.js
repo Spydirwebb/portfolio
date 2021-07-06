@@ -44,6 +44,12 @@ const ImageSection = () => {
 const ImageSectionStyled = styled.div`
     margin-top: 5rem;
     display: flex;
+    @media screen and (max-width: 1000px){
+        flex-direction: column;
+        .left-content{
+            margin-bottom : 2rem;
+        }    
+    }
     .left-content{
         width: 100%;
         height: 63vh;
@@ -57,7 +63,7 @@ const ImageSectionStyled = styled.div`
         
         h4{
             font-size: 2rem;
-            font-color: var(--white-color);
+            color: var(--white-color);
             span{
                 font-size: 2rem;
             }
@@ -77,6 +83,7 @@ const ImageSectionStyled = styled.div`
             .info-title, .info{
                 p{
                     padding: .3rem 0;
+                }
             }
         }
     }

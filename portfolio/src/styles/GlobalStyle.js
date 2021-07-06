@@ -110,7 +110,7 @@ h6{
 .light-dark-mode{
       position: fixed;
       right: 0;
-      top: 10%;
+      top: 50%;
       background-color: var(--background-light-color-2);
       width: 6.5rem;
       height: 2.5rem;
@@ -128,11 +128,20 @@ h6{
 //nav-toggler
 .hamburger-menu{
     position: absolute;
-    right: 10%;
+    right: 5%;
     top: 3%;
     z-index: 15;
-    font-size: 3rem;
+    svg{
+        font-size: 3rem;
+    }
+
+    
 }
+.nav-toggle{
+        transform: translateX(0);
+        z-index: 20;
+    }
+    
 //global media queires
 
 
