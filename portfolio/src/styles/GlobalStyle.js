@@ -96,6 +96,12 @@ h1{
     color: var(--white-color);
     span{
         font-size: inherit;
+        @media screen and (max-width: 502px){
+            font-size: 3rem;
+        }
+    }
+    @media screen and (max-width: 502px){
+        font-size: 3rem;
     }
 }
 span{
@@ -127,10 +133,12 @@ h6{
     }
 //nav-toggler
 .hamburger-menu{
-    position: absolute;
+    position: fixed;
     right: 5%;
     top: 3%;
+    display: none;
     z-index: 15;
+    
     svg{
         font-size: 3rem;
     }
@@ -146,7 +154,9 @@ h6{
 
 
 @media screen and (max-width: 1200px){
-
+    .hamburger-menu{
+        display: block;
+    }
 }
 
 

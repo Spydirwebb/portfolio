@@ -38,7 +38,12 @@ const MenuItemStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
-   
+    @media screen and (max-width: 920px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 670px){
+        grid-template-columns: repeat(1, 1fr);
+    }
     .grid-item{
         .portfolio-content{
             display: block;
@@ -101,6 +106,12 @@ const MenuItemStyled = styled.div`
                     justify-content: center;
                     transition: all .4s ease-in-out;
                     opacity: 1;
+                    @media screen and (max-width: 920px){
+                        transform: translate(-50%, -120%);
+                    }
+                    @media screen and (max-width: 670px){
+                        transform: translate(-50%, -85%);
+                    }
                     li{
                         transition: all .4s ease-in-out;
                         &:hover{
@@ -129,6 +140,12 @@ const MenuItemStyled = styled.div`
                     opacity: 0.9;
                     transform-origin: left;
                     transition: all .4s ease-in-out;
+                    @media screen and (max-width: 920px){
+                        height: calc(100% - 55%);
+                    }
+                    @media screen and (max-width: 670px){
+                        height: calc(100% - 42%);
+                    }
                 }
             }
         }

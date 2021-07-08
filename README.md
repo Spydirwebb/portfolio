@@ -19,3 +19,4 @@ https://www.youtube.com/watch?v=tiOChpaiFBc&list=WL
 6/30/21 - 7h26m52s
 7/02/21 - 8h18m43s
 7/06/21 - 8h43m29s
+7/07/21 - Finished!

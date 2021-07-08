@@ -3,8 +3,7 @@ image:
 
 tasks:
   - init: npm install
-    command: cd portfolio
-    command: yarn start
+    command: cd portfolio && yarn start
 
 vscode:
   extensions:

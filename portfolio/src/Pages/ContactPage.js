@@ -41,7 +41,7 @@ const ContactPage = () => {
                                 <label htlmlFor="text-area">Enter Your Message</label>
                                 <textarea name='textarea' id='textarea' cols="30" rows="10"></textarea>
                             </div>
-                            <div className="form-field">
+                            <div className="form-field f-button">
                                 <PrimaryButton title="Send Email"/>
                             </div>
                         </form>
@@ -78,19 +78,33 @@ const ContactPageStyled = styled.section`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-column-gap: 2rem;
+        @media screen and (max-width: 978px){
+            grid-template-columns: repeat(1, 1fr);
+            .f-button{
+                margin-bottom: 2.5rem;
+                display: flex;
+                justify-content: center;
+                align-items:center;
+            }
+        }
         .right-content{
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(1, fr);
+            grid-row-gap: 2rem;
+            width: 100%;
         }
         .contact-title{
             h4{
                 color: var(--white-color);
-                paddding: 1rem 0;
+                padding: 1rem 0;
                 font-size: 1.8rem;
             }
         }
         .form{
             width: 100%;
+            //@media screen and (max-width: 502px){
+            //    width: 70%;
+            //}
             .form-field{
                 margin-top: 2rem;
                 position: relative;
