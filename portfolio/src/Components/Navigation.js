@@ -1,13 +1,42 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
 import avatar from '../img/avatar.jpg'
 
-const Navigation = () => {
+import Brightness6Icon from '@material-ui/icons/Brightness6';
+import Switch from '@material-ui/core/Switch';
+
+const Navigation = ({toggleTheme}) => {
+    const [checked, setChecked] = useState(false)
+
+    const handleToggle = () => {
+        toggleTheme();
+        if(checked===false){
+            setChecked(true);
+        }else{
+            setChecked(false);
+        }
+    }
+    
     return(
         <NavigationStyled>
             <div className="avatar">
                 <img src={avatar} alt=""/>
+            </div>
+            <div className="theme">
+                <div className="light-dark-mode">
+                    <div classname="left-content">
+                        <Brightness6Icon />
+                    </div>
+                    <div classname="right-content">
+                        <Switch 
+                            value=""
+                            checked={checked}
+                            onClick={handleToggle}
+                            inputProps={{ 'aria-label': ""}}
+                        />
+                    </div>
+                </div>
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
@@ -51,13 +80,34 @@ const NavigationStyled = styled.nav`
         border-bottom: 1px solid var(--border-color);
         text-align: center;
         padding: 1rem 0;
+        
         img{
             width: 70%;
             border-radius: 50%;
             border: 8px solid var(--border-color);
         }
     }
-
+    .theme{
+        width: 100%;
+        border-bottom: 1px solid var(--border-color);
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        .light-dark-mode{
+            background-color: var(--background-light-color-2);
+            width: 6.5rem;
+            height: 2.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            svg{
+                display: flex;
+                align-items: center;
+                font-size: 1.7rem;
+                color: var(--white-color);
+            }
+        }
+    }
     .nav-items{
         width: 100%;
         text-align: center;

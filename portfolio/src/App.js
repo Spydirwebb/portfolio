@@ -10,15 +10,12 @@ import ContactPage from './Pages/ContactPage'
 import PortfolioPage from './Pages/PortfolioPage'
 import ResumePage from './Pages/ResumePage'
 
-import Brightness6Icon from '@material-ui/icons/Brightness6';
-import Switch from '@material-ui/core/Switch';
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from "@material-ui/core";
 
 
-function App() {
+const App = () => {
   const [theme, setTheme] = useState("dark-theme")
-  const [checked, setChecked] = useState(false)
   const [navToggle, setNavToggle] = useState(false)
 
   useEffect(() => {
@@ -28,66 +25,48 @@ function App() {
   const toggleTheme = () => {
     if(theme ==='light-theme'){
       setTheme('dark-theme');
-      setChecked(false);
     }else{
       setTheme('light-theme');
-      setChecked(true);
     }
   }
 
   return (
-    <div className="App">
-      <Sidebar navToggle={navToggle} />
-          <div className="theme">
-            <div className="light-dark-mode">
-              <div classname="left-content">
-                  <Brightness6Icon />
-              </div>
-              <div classname="right-content">
-                  <Switch 
-                    value=""
-                    checked={checked}
-                    onClick={toggleTheme}
-                    inputProps={{ 'aria-label': ""}}
-                  />
-              </div>
+        <div className="App">
+            <Sidebar navToggle={navToggle} toggleTheme={toggleTheme}/>
+            <div className="hamburger-menu">
+                <IconButton onClick={()=>setNavToggle(!navToggle)}>
+                    <MenuIcon />
+                </IconButton>
             </div>
-          </div>
-          <div className="hamburger-menu">
-            <IconButton onClick={()=>setNavToggle(!navToggle)}>
-              <MenuIcon />
-            </IconButton>
-          </div>
-          <MainContentStyled>
-          <div className="lines">
-              <div className="line-1"></div>
-              <div className="line-2"></div>
-              <div className="line-3"></div>
-              <div className="line-4"></div>
-          </div>
-          
-          <Switching>
-              <Route path="/" exact>
-                <HomePage />
-              </Route>
-              <Route path="/about" exact>
-                <AboutPage />
-              </Route>
-              <Route path="/resume" exact>
-                <ResumePage />
-              </Route>
-              <Route path="/portfolio" exact>
-                <PortfolioPage />
-              </Route>
-              <Route path="/blogs" exact>
-                <BlogsPage />
-              </Route>
-              <Route path="/contact" exact>
-                <ContactPage />
-              </Route>
-          </Switching>
-      </MainContentStyled>
-    </div>
+            <MainContentStyled>
+                <div className="lines">
+                    <div className="line-1"></div>
+                    <div className="line-2"></div>
+                    <div className="line-3"></div>
+                    <div className="line-4"></div>
+                </div>
+                <Switching>
+                    <Route path="/" exact>
+                        <HomePage />
+                    </Route>
+                    <Route path="/about" exact>
+                        <AboutPage />
+                    </Route>
+                    <Route path="/resume" exact>
+                        <ResumePage />
+                    </Route>
+                    <Route path="/portfolio" exact>
+                        <PortfolioPage />
+                    </Route>
+                    <Route path="/blogs" exact>
+                        <BlogsPage />
+                    </Route>
+                    <Route path="/contact" exact>
+                        <ContactPage />
+                    </Route>
+                  </Switching>
+              </MainContentStyled>
+      </div>
   );
 }
 

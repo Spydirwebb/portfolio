@@ -10,27 +10,27 @@ const ImageSection = () => {
                 <img src={beardedBW} alt="resume" />
             </div>
             <div className="right-content">
-                <h4>I am <span>Lorem Ipsum</span></h4>
+                <h4>I am <span>Jeff Webb</span></h4>
                 <p className="paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Donec ut congue arcu. Etiam pellentesque interdum vulputate. 
-                    Quisque convallis leo in nunc tincidunt congue. 
+                    I am a <span>Full-Stack Web Developer</span> based in Reno, Nevada. 
+                    I enjoy building intuitive and functional websites in <span>React</span>.
+                    I am a <span>self-taught</span> developer with a background in science, 
+                    who learned programming to advertise and make data analysis easier, 
+                    and loved it too much to stop. 
                 </p>
                 <div className="about-info">
                     <div className="info-title">
                         <p>Full Name</p>
                         <p>Age</p>  
-                        <p>Nationality</p>
                         <p>Languages</p>
                         <p>Location</p>
                         <p>Service</p>
                     </div>
                     <div className="info">
-                        <p>: Lorem Ipsum</p>
-                        <p>: 36</p>  
-                        <p>: Spanish</p>
-                        <p>: Spanish, French, English</p>
-                        <p>: London, United Kingdom</p>
+                        <p>: Jeff Webb</p>
+                        <p>: 31</p>  
+                        <p>: English, Italian</p>
+                        <p>: Reno, Nevada</p>
                         <p>: Freelance</p>
                     </div>
                 </div>

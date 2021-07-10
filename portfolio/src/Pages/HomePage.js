@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import GithubIcon from '@material-ui/icons/GitHub'
-import YoutubeIcon from '@material-ui/icons/YouTube'
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 import Particles from '../Components/Particles'
 
@@ -13,21 +13,19 @@ const HomePage = () => {
                 <Particles />
             </div>
             <div className="typography">
-                <h1>Hi I'm <span>Lorem Ipsum</span></h1>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                    Morbi sodales orci id purus pharetra sollicitudin. 
-                    Donec pharetra volutpat est, eu.
-                </p>
+                <h1>Hi I'm <span>Jeff Webb</span></h1>
+                <p>Full-Stack Web Developer</p>
+                <p>Mobile App Developer</p>
+                <p>Hobbyist Python Programmer</p>
                 <div className="icons">
-                    <a href="https://www.lipsum.com/" className="icon i-facebook">
+                    <a href="https://www.facebook.com/jeff.webb.779/" className="icon i-facebook">
                         <FacebookIcon />
                     </a>
-                    <a href="https://www.lipsum.com/" className="icon i-github">
+                    <a href="https://github.com/Spydirwebb" className="icon i-github">
                         <GithubIcon />
                     </a>
-                    <a href="https://www.lipsum.com/" className="icon i-youtube">
-                        <YoutubeIcon />
+                    <a href="https://www.linkedin.com/in/jeffery-webb-8780b879/" className="icon i-linkedIn">
+                        <LinkedInIcon />
                     </a>
                 </div>
             </div>
@@ -73,10 +71,10 @@ const HomePageStyled = styled.header`
                     margin: 0.5rem;
                 }
             }
-            .i-youtube{
+            .i-linkedIn{
                 &:hover{
-                    border: 2px solid red;
-                    color: red;
+                    border: 2px solid #0A66C2;
+                    color: #0A66C2;
                 }
         }
             .i-github{

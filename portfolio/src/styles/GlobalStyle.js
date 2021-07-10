@@ -112,7 +112,7 @@ h6{
     font-size: 1.2rem;
     padding-bottom: .6rem;
 }
-//floating toggler
+/*/floating toggler
 .light-dark-mode{
       position: fixed;
       right: 0;
@@ -130,7 +130,7 @@ h6{
         font-size: 1.7rem;
         color: var(--white-color);
       }
-    }
+    } */
 //nav-toggler
 .hamburger-menu{
     position: fixed;
