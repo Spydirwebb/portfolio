@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import {NavLink} from 'react-router-dom'
-import avatar from '../img/avatar.jpg'
+//import avatar from '../img/avatar.jpg'
+import avatarMe from '../img/me_reunion.jpg'
 
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import Switch from '@material-ui/core/Switch';
@@ -21,7 +22,7 @@ const Navigation = ({toggleTheme}) => {
     return(
         <NavigationStyled>
             <div className="avatar">
-                <img src={avatar} alt=""/>
+                <img src={avatarMe} alt=""/>
             </div>
             <div className="theme">
                 <div className="light-dark-mode">

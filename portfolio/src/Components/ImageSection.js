@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import beardedBW from '../img/beardedBW.jpg'
+//import beardedBW from '../img/beardedBW.jpg'
+import meBW from '../img/me_bw.jpg'
+import resume from '../img/resume/webb.resume.dev.pdf'
 import PrimaryButton from './PrimaryButton'
 
 const ImageSection = () => {
     return(
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={beardedBW} alt="resume" />
+                <img src={meBW} alt="resume" />
             </div>
             <div className="right-content">
                 <h4>I am <span>Jeff Webb</span></h4>
@@ -34,7 +36,9 @@ const ImageSection = () => {
                         <p>: Freelance</p>
                     </div>
                 </div>
-                <PrimaryButton title={'Download CV'} />
+                <a href={resume} target='_blank' rel='noopener noreferrer'>
+                    <PrimaryButton title={'Download CV'} />
+                </a>
             </div>
         </ImageSectionStyled>
     )
@@ -52,10 +56,10 @@ const ImageSectionStyled = styled.div`
     }
     .left-content{
         width: 100%;
-        height: 63vh;
+        height: 88vh;
         img{
             height: 100%;
-            width: 90%;
+            width: 100%;
             object-fit: cover;
         }
     }
