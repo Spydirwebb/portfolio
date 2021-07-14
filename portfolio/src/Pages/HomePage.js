@@ -16,7 +16,7 @@ const HomePage = () => {
                 <h1>Hi I'm <span>Jeff Webb</span></h1>
                 <p>Full-Stack Web Developer</p>
                 <p>Mobile App Developer</p>
-                <p>Hobbyist Python Programmer</p>
+                <p>Python Software Developer</p>
                 <div className="icons">
                     <a href="https://www.facebook.com/jeff.webb.779/" className="icon i-facebook">
                         <FacebookIcon />

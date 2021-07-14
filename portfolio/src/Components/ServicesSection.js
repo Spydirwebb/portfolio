@@ -3,9 +3,12 @@ import styled from 'styled-components'
 import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
 import ServiceCard from './ServiceCard'
-import webDesign from '../img/webDesign.jpg'
-import AI from '../img/AI.jpg'
-import gameDev from '../img/gameDev.jpg'
+//import webDesign from '../img/webDesign.jpg'
+import responsive from '../img/responsive.jpg'
+import ai from '../img/ai.jpg'
+import mobile from '../img/mobile.png'
+//import AI from '../img/AI.jpg'
+//import gameDev from '../img/gameDev.jpg'
 
 const ServicesSection = () => {
     return(
@@ -14,18 +17,21 @@ const ServicesSection = () => {
                 <Title title={"Services"} span={"Services"} />
                 <div className="services">
                     <ServiceCard 
-                        image={webDesign} 
-                        title={"Web Design"} 
-                        paragraph={"Lorem ipsum dolor sit amet,consectetur adipiscing elit. Morbi sodales orci id purus pharetra sollicitudin. Donec pharetra volutpat est, eu."}/>
+                        image={responsive} 
+                        title={"Web Development"} 
+                        tagline={"Everything needs a website"}
+                        paragraph={"Full-Stack React development that focuses on responsive, clean, and elegant code."}/>
                     <div className="mid-card"><ServiceCard 
-                        image={AI} 
-                        title={"Artificial Intelligence"} 
-                        paragraph={"Lorem ipsum dolor sit amet,consectetur adipiscing elit. Morbi sodales orci id purus pharetra sollicitudin. Donec pharetra volutpat est, eu."}/>
+                        image={mobile} 
+                        title={"Mobile App Development"} 
+                        tagline={"Since everyone has an app idea"}
+                        paragraph={"App design and development using intutive and attractive interfaces."}/>
                     </div>
                     <ServiceCard 
-                        image={gameDev} 
-                        title={"Game Development"} 
-                        paragraph={"Lorem ipsum dolor sit amet,consectetur adipiscing elit. Morbi sodales orci id purus pharetra sollicitudin. Donec pharetra volutpat est, eu."}/>
+                        image={ai} 
+                        title={"Data Science/ ML, AI"} 
+                        tagline={"I'm a neuroscientist, so I had to"}
+                        paragraph={"Data science striving towards machine learning and artificial intelligence"}/>
                 </div>
             </ServicesSectionStyled>    
         </InnerLayout>

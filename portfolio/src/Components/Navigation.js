@@ -21,21 +21,23 @@ const Navigation = ({toggleTheme}) => {
     
     return(
         <NavigationStyled>
-            <div className="avatar">
-                <img src={avatarMe} alt=""/>
-            </div>
-            <div className="theme">
-                <div className="light-dark-mode">
-                    <div classname="left-content">
-                        <Brightness6Icon />
-                    </div>
-                    <div classname="right-content">
-                        <Switch 
-                            value=""
-                            checked={checked}
-                            onClick={handleToggle}
-                            inputProps={{ 'aria-label': ""}}
-                        />
+            <div classname="top-sections">
+                <div className="avatar">
+                    <img src={avatarMe} alt=""/>
+                </div>
+                <div className="theme">
+                    <div className="light-dark-mode">
+                        <div classname="left-content">
+                            <Brightness6Icon />
+                        </div>
+                        <div classname="right-content">
+                            <Switch 
+                                value=""
+                                checked={checked}
+                                onClick={handleToggle}
+                                inputProps={{ 'aria-label': ""}}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,9 +77,8 @@ const NavigationStyled = styled.nav`
     height: 100%;
     width: 100%;
     border-right: 1px solid var(--border-color);
-
     .avatar{
-        width: 100%;
+        width: 100%;   
         border-bottom: 1px solid var(--border-color);
         text-align: center;
         padding: 1rem 0;
@@ -119,13 +120,18 @@ const NavigationStyled = styled.nav`
             display: block;
             a{
                 display: block;
-                padding: .45rem 0;
                 position: relative;
                 z-index: 10;
                 text-transform: uppercase;
                 transition: all .4s ease-in-out;
                 font-weight: 600;
                 letter-spacing: 1px;
+                font-size: 0.6rem;
+                padding: .2rem;
+                @media screen and (min-height: 620px){
+                    font-size: 1rem;
+                    padding: .45rem 0;
+                }
                 &:hover{
                     cursor: pointer;
                     color: var(--white-color);
@@ -158,6 +164,10 @@ const NavigationStyled = styled.nav`
             font-size: 1.1rem;
             display: block;
             text-align: center;
+            @media screen and (max-height: 620px){
+                font-size: .6rem;
+                padding: .2rem 0;
+            }
         }
     }
 `;
