@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
 import {MainLayout, InnerLayout} from "../styles/Layouts"
 import Title from '../Components/Title'
@@ -9,71 +9,115 @@ import PhoneIcon from '@material-ui/icons/Phone';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import ContactItem from '../Components/ContactItem'
+import ContactItemMobile from '../Components/ContactItemMobile'
 
 const ContactPage = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakPoint = 620;
     const Phone = <PhoneIcon />
     const Email = <EmailIcon />
     const Location = <LocationOnIcon />
+    const phone1 = "+17752401469"
+    const phone2 = ""
+    const email1 = "webbjeffery89@gmail.com"
+    const email2 = "jwresearchnovice@gmail.com"
+    const cityState = "Reno, Nevada"
+    const country = "United States"
+
+    useEffect(() => {
+        window.addEventListener("resize", () =>setWidth(window.innerWidth))
+    },[])
+    
+
+    const MobileContact = () => {
+        return (
+            <div className='right-content'>
+                <ContactItemMobile 
+                    icon={Phone}
+                    title={'Phone'}
+                    contact1={phone1}
+                    contact2={phone2} 
+                />
+                <ContactItemMobile
+                    icon={Email}
+                    title={'Email'}
+                    contact1={email1}
+                    contact2={email2} 
+                />
+                <ContactItemMobile
+                    icon={Location}
+                    title={'Location'}
+                    contact1={cityState}
+                    contact2={country} 
+                />
+            </div>
+        )
+    }
+    const DesktopContact = () => {
+        return (
+            <div className='right-content'>
+                <ContactItem 
+                    icon={Phone}
+                    title={'Phone'}
+                    contact1={phone1}
+                    contact2={phone2} 
+                />
+                <ContactItem
+                    icon={Email}
+                    title={'Email'}
+                    contact1={email1}
+                    contact2={email2} 
+                />
+                <ContactItem
+                    icon={Location}
+                    title={'Location'}
+                    contact1={cityState}
+                    contact2={country} 
+                />
+        </div>
+        )
+    }
     
     return(
         <MainLayout>
-            <Title title={"Contact"} span={"Contact"} />
-            <ContactPageStyled>
-                <InnerLayout className='contact-section'>
-                    <div className='left-content'>
-                        <div className="contact-title">
-                            <h4>Get In Touch</h4>
+            <ContactPage2Styled>
+                <Title title={"Contact"} span={"Contact"} />
+                    <InnerLayout className='contact-section'>
+                        <div className='left-content'>
+                            <div className="contact-title">
+                                <h4>Get In Touch</h4>
+                            </div>
+                            <form className='form'>
+                                <div className='form-field'>
+                                    <label htmlFor="name">Enter your name* </label>
+                                    <input type='text' id='name'/>
+                                </div>
+                                <div className='form-field'>
+                                    <label htmlFor="email">Enter your email* </label>
+                                    <input type='email' id='email'/>
+                                </div>
+                                <div className='form-field'>
+                                    <label htmlFor="subject">Subject* </label>
+                                    <input type='text' id='subject'/>
+                                </div>
+                                <div className='form-field text-area'>
+                                    <label htlmlFor="text-area">Enter Your Message</label>
+                                    <textarea name='textarea' id='textarea' cols="30" rows="10"></textarea>
+                                </div>
+                                <div className="form-field f-button">
+                                    <PrimaryButton title="Send Email"/>
+                                </div>
+                            </form>
                         </div>
-                        <form className='form'>
-                            <div className='form-field'>
-                                <label htmlFor="name">Enter your name* </label>
-                                <input type='text' id='name'/>
-                            </div>
-                            <div className='form-field'>
-                                <label htmlFor="email">Enter your email* </label>
-                                <input type='email' id='email'/>
-                            </div>
-                            <div className='form-field'>
-                                <label htmlFor="subject">Subject* </label>
-                                <input type='text' id='subject'/>
-                            </div>
-                            <div className='form-field text-area'>
-                                <label htlmlFor="text-area">Enter Your Message</label>
-                                <textarea name='textarea' id='textarea' cols="30" rows="10"></textarea>
-                            </div>
-                            <div className="form-field f-button">
-                                <PrimaryButton title="Send Email"/>
-                            </div>
-                        </form>
-                    </div>
-                    <div className='right-content'>
-                        <ContactItem 
-                            icon={Phone}
-                            title={'Phone'}
-                            contact1={'+7751111111'}
-                            contact2={'+7751111111'} 
-                        />
-                        <ContactItem 
-                            icon={Email}
-                            title={'Email'}
-                            contact1={'webb.jeffery.89@gmail.com'}
-                            contact2={''} 
-                        />
-                        <ContactItem 
-                            icon={Location}
-                            title={'Location'}
-                            contact1={'Reno, Nevada'}
-                            contact2={'United States'} 
-                        />
-                    </div>
-                </InnerLayout>
-            </ContactPageStyled>
+                        {width>breakPoint ? <DesktopContact /> : <MobileContact />}
+                    </InnerLayout>
+            </ContactPage2Styled>
         </MainLayout>
     )
 
 }
 
-const ContactPageStyled = styled.section`
+const ContactPage2Styled = styled.section`
     .contact-section{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -102,9 +146,6 @@ const ContactPageStyled = styled.section`
         }
         .form{
             width: 100%;
-            //@media screen and (max-width: 502px){
-            //    width: 70%;
-            //}
             .form-field{
                 margin-top: 2rem;
                 position: relative;

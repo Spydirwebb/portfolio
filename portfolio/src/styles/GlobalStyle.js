@@ -37,6 +37,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --primary-opacity: .2;
 }
 .dark-theme{
     --primary-color: #007bff;
@@ -55,6 +56,7 @@ const GlobalStyle = createGlobalStyle`
     --scrollbar-bg-color: #383838;
     --scrollbar-thump-color: #6b6b6b;
     --scrollbar-track-color: #383838;
+    --primary-opacity: 1;
 }
 
 *{
@@ -112,25 +114,7 @@ h6{
     font-size: 1.2rem;
     padding-bottom: .6rem;
 }
-/*/floating toggler
-.light-dark-mode{
-      position: fixed;
-      right: 0;
-      top: 50%;
-      background-color: var(--background-light-color-2);
-      width: 6.5rem;
-      height: 2.5rem;
-      z-index: 15;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      svg{
-        display: flex;
-        align-items: center;
-        font-size: 1.7rem;
-        color: var(--white-color);
-      }
-    } */
+
 //nav-toggler
 .hamburger-menu{
     position: fixed;
@@ -138,26 +122,23 @@ h6{
     top: 3%;
     display: none;
     z-index: 15;
-    
     svg{
         font-size: 3rem;
     }
-
     
 }
 .nav-toggle{
         transform: translateX(0);
-        z-index: 20;
+        z-index: 14;
     }
     
 //global media queires
-
-
 @media screen and (max-width: 1200px){
     .hamburger-menu{
         display: block;
     }
-}
+} 
+
 
 
 `;

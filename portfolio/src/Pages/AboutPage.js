@@ -5,7 +5,7 @@ import { MainLayout } from '../styles/Layouts'
 import Title from '../Components/Title'
 import ImageSection from '../Components/ImageSection'
 import ServicesSection from '../Components/ServicesSection'
-import ReviewsSection from '../Components/ReviewsSection'
+//import ReviewsSection from '../Components/ReviewsSection'
 
 const AboutPage = () => {
     return(
@@ -24,9 +24,6 @@ const AboutPage = () => {
 }
 
 const AboutStyled = styled.section`
-    @media screen and (max-width: 1000px){
-        
-    }
 `;
 
 export default AboutPage

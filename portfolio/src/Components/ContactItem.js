@@ -13,8 +13,10 @@ const ContactItem = ({icon, title, contact1, contact2}) => {
             </div>
             <div className="right-content">
                 <h6>{title}</h6>
-                <p>{contact1}</p>
-                <p>{contact2}</p>
+                <div className='contact-details'>
+                    <p>{contact1}</p>
+                    <p>{contact2}</p>
+                </div>
             </div>
         </ContactItemStyled>
     )
@@ -33,7 +35,7 @@ const ContactItemStyled = styled.div`
         padding: 1.5rem;
         border: 1px solid var(--border-color);
         display: flex;
-        align-item: center;
+        align-items: center;
         justify-content: center;
         margin-right: 1.5rem;
         svg{
@@ -44,10 +46,10 @@ const ContactItemStyled = styled.div`
         h6{
             color: var(--white-color);
             font-size: 1.2rem;
-            padding-bottom: .6rem;
+            padding-bottom: .5rem;
         }
-        p{
-            padding: .1rem 0;
+        .contact-details{
+            transform: translateY(-15px);
         }
     }
 `;
