@@ -4,19 +4,21 @@ import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
 //import ProgressBar from './ProgressBar'
 import StarBar from './StarBar'
+import StarIcon from '@material-ui/icons/Star';
+
 
 const Skills = () => {
     return(
         <SkillsStyled>
-            <Title title={'My Skills'} span={'My Skills'} />
+            <Title title={'My Skills'} span={'Skills'} />
             <InnerLayout>
+                <div className="language-title">
+                    <h3>Language Experience</h3>
+                    <p><StarIcon /> = 1 year</p>
+                </div>
                 <div className='skills'>
                     <StarBar 
-                        title={"HTML5"}
-                        years={4}
-                    />
-                    <StarBar 
-                        title={"CSS3"}
+                        title={"HTML/CSS"}
                         years={4}
                     />
                     <StarBar 
@@ -32,15 +34,19 @@ const Skills = () => {
                         years={3}
                     />
                     <StarBar 
+                        title={"PYTHON"}
+                        years={3}
+                    />
+                    <StarBar 
+                        title={"DJANGO"}
+                        years={1}
+                    />
+                    <StarBar 
                         title={"JAVA"}
                         years={1}
                     />
                     <StarBar 
-                        title={"PYTHON"}
-                        wyears={3}
-                    />
-                    <StarBar 
-                        title={"C#"}
+                        title={"ANDROID"}
                         years={1}
                     />
                 </div>
@@ -51,6 +57,31 @@ const Skills = () => {
 }
 
 const SkillsStyled = styled.section`
+    .language-title{
+        display: flex;
+        margin-bottom: 3rem;
+        @media screen and (max-width: 700px){
+            display: block;
+            margin-bottom: 1rem;
+        }
+        h3{
+            color: var(--white-color);
+            font-size: 2rem;
+        }
+        p{
+            font-size: 1rem;
+            margin-left: 4rem;
+            padding-top: .75rem;
+            @media screen and (max-width: 700px){
+                padding-bottom: 1rem;
+                margin-left: 0rem;
+            }
+            svg{
+                font-size: 1rem;
+                color: var(--primary-color);
+            }
+        }
+    }
     .skills{
         display: grid;
         grid-template-columns: repeat(2, 1fr);

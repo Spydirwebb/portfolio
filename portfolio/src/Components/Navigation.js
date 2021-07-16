@@ -73,8 +73,12 @@ const Navigation = ({toggleTheme}) => {
                     <NavLink to="/blogs" activeClassName="active-class">Blogs</NavLink>
                 </li>
                 <li className="nav-item">
+                    <NavLink to="/library" activeClassName="active-class">Library</NavLink>
+                </li>
+                <li className="nav-item">
                     <NavLink to="/contact" activeClassName="active-class">Contact</NavLink>
                 </li>
+                
             </ul>
             <footer className="footer">
                 <p>@2021 Jeff Webb's Portfolio Website</p>

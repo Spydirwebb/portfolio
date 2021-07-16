@@ -9,6 +9,7 @@ import BlogsPage from './Pages/BlogsPage'
 import ContactPage from './Pages/ContactPage'
 import PortfolioPage from './Pages/PortfolioPage'
 import ResumePage from './Pages/ResumePage'
+import LibraryPage from './Pages/LibraryPage'
 
 import MenuIcon from '@material-ui/icons/Menu';
 import { IconButton } from "@material-ui/core";
@@ -60,6 +61,9 @@ const App = () => {
                     </Route>
                     <Route path="/blogs" exact>
                         <BlogsPage />
+                    </Route>
+                    <Route path="/library" exact>
+                        <LibraryPage />
                     </Route>
                     <Route path="/contact" exact>
                         <ContactPage />
