@@ -140,7 +140,6 @@ h6{
 } 
 
 
-
 `;
 
 export default GlobalStyle;

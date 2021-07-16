@@ -4,6 +4,7 @@ import {NavLink} from 'react-router-dom'
 //import avatar from '../img/avatar.jpg'
 import avatarMe from '../img/me_reunion.jpg'
 
+import { withStyles } from '@material-ui/core/styles'
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import Switch from '@material-ui/core/Switch';
 
@@ -18,20 +19,34 @@ const Navigation = ({toggleTheme}) => {
             setChecked(false);
         }
     }
+
+    const CustomSwitch = withStyles({
+        switchBase: {
+          color: 'var(--primary-color)',
+          '&$checked': {
+            color: 'red',
+          },
+          '&$checked + $track': {
+            backgroundColor: 'var(--background-dark-color)',
+          },
+        },
+        checked: {},
+        track: {},
+      })(Switch);
     
     return(
         <NavigationStyled>
-            <div classname="top-sections">
+            <div className="top-sections">
                 <div className="avatar">
                     <img src={avatarMe} alt=""/>
                 </div>
                 <div className="theme">
                     <div className="light-dark-mode">
-                        <div classname="left-content">
+                        <div className="left-content">
                             <Brightness6Icon />
                         </div>
-                        <div classname="right-content">
-                            <Switch 
+                        <div className="right-content">
+                            <CustomSwitch
                                 value=""
                                 checked={checked}
                                 onClick={handleToggle}

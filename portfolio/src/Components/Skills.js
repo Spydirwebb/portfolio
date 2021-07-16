@@ -2,7 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
-import ProgressBar from './ProgressBar'
+//import ProgressBar from './ProgressBar'
+import StarBar from './StarBar'
 
 const Skills = () => {
     return(
@@ -10,33 +11,37 @@ const Skills = () => {
             <Title title={'My Skills'} span={'My Skills'} />
             <InnerLayout>
                 <div className='skills'>
-                    <ProgressBar 
-                        title={'HTML5'}
-                        width={'70%'}
+                    <StarBar 
+                        title={"HTML5"}
+                        years={4}
                     />
-                    <ProgressBar 
-                        title={'CSS3'}
-                        width={'90%'}
+                    <StarBar 
+                        title={"CSS3"}
+                        years={4}
                     />
-                    <ProgressBar 
-                        title={'JAVASCRIPT'}
-                        width={'85%'}
+                    <StarBar 
+                        title={"JAVASCRIPT"}
+                        years={4}
                     />
-                    <ProgressBar 
-                        title={'JAVA'}
-                        width={'60%'}
+                    <StarBar 
+                        title={"REACT JS"}
+                        years={3}
                     />
-                    <ProgressBar 
-                        title={'PYTHON'}
-                        width={'95%'}
+                    <StarBar 
+                        title={"NODE JS"}
+                        years={3}
                     />
-                    <ProgressBar 
-                        title={'React JS'}
-                        width={'75%'}
+                    <StarBar 
+                        title={"JAVA"}
+                        years={1}
                     />
-                    <ProgressBar 
-                        title={'UNITY'}
-                        width={'75%'}
+                    <StarBar 
+                        title={"PYTHON"}
+                        wyears={3}
+                    />
+                    <StarBar 
+                        title={"C#"}
+                        years={1}
                     />
                 </div>
             </InnerLayout>
