@@ -56,10 +56,13 @@ const ImageSectionStyled = styled.div`
     }
     .left-content{
         width: 100%;
-        height: 88vh;
+        //height: 88vh;
+        height: 86vh;
         img{
             height: 100%;
             width: 100%;
+            //height: 100%;
+            //width: auto;
             object-fit: cover;
         }
     }
