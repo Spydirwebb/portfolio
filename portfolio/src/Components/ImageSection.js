@@ -57,7 +57,8 @@ const ImageSectionStyled = styled.div`
     .left-content{
         width: 100%;
         //height: 88vh;
-        height: 86vh;
+        height: 26.75rem;
+        margin-right: 1rem;
         img{
             height: 100%;
             width: 100%;
