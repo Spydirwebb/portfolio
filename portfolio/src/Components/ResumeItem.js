@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import PersonIcon from '@material-ui/icons/Person';
 
-const ResumeItem = ({year, title, subTitle, text}) => {
+const ResumeItem = ({year, title, subTitle, text, link}) => {
     return(
         <ResumeItemStyled>
             <div className='left-content'>
@@ -9,7 +10,10 @@ const ResumeItem = ({year, title, subTitle, text}) => {
             </div>
             <div className='right-content'>
                 <h5>{title}</h5>
-                <h6>{subTitle}</h6>
+                <a href={link}>    
+                    <h6>{subTitle} {link ? <PersonIcon /> :""}</h6>
+                    
+                </a>
                 <p>{text}</p>
             </div>
         </ResumeItemStyled>
@@ -28,8 +32,9 @@ const ResumeItemStyled = styled.div`
         padding-bottom: 3rem;
     }
     .left-content{
+        //border:2px solid red;
         padding-left: 20px;
-        width: 50%;
+        width: 25%;
         position: relative;
         &::before{
             content: "";
@@ -49,6 +54,8 @@ const ResumeItemStyled = styled.div`
     .right-content{
         padding-left: 5rem;
         position: relative;
+        //border: 2px solid green;
+        width: 75%;
         &::before{
             content: "";
             position: absolute;
@@ -66,6 +73,11 @@ const ResumeItemStyled = styled.div`
         h6{
             padding-bottom: .6rem;
             font-size: 1.5rem;
+        }
+        svg{
+            vertical-align: bottom;
+            font-size: 2rem;
+            color: var(--primary-color);
         }
     }
 `;

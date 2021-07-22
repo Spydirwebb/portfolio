@@ -15,11 +15,11 @@ const Resume = () => {
             <Title title={'Resume'} span={'Resume'} />
             <InnerLayout>
                 <div className="small-title">
-                    <SmallTitle icon={briefcase} title={'Professional Qualifications'} />
+                    <SmallTitle icon={briefcase} title={'Professional Experience'} />
                 </div>
                 <div className='resume-content'>
                     <ResumeItem 
-                        year = {'2020-Current'}
+                        year = {'2020 - Present'}
                         title = {'Database Administrator/Clinical Research Coordinator'}
                         subTitle = {'Renown Health'}
                         text = {'Created programs to reduce errors and redundant work by 300%. Spearheaded digitization of research charts for more accurate data analytics. Administrated database of patient information'} 
@@ -30,34 +30,49 @@ const Resume = () => {
                         subTitle = {"Allied Clinical Research"}
                         text = {"Increased recruitment of subjects by 150% using database queries. Reduced need of sponsor oversight with automated reporting systems"}
                     />
-                    
                     <ResumeItem 
-                        year = {'2018-2019'}
+                        year = {'2018 - 2019'}
                         title = {'Clinical Research Coordinator'}
                         subTitle = {'ROC Foundation'}
                         text = {'Created clinical trial management system to track and analyze data while increasing invoicing accuracy and compliance. Analyzed patient data pool to increase recruitment. Grew revenue for a small clinical research site by 200%'}
                     />
+                    <ResumeItem 
+                        year = {'2015'}
+                        title = {'Undergraduate Research Assistant'}
+                        subTitle = {'ROC Foundation'}
+                        text = {'Designed new trial system for more intuitive UI and increased study enrollment by 50%'}
+                    />
                 </div>
                 <div className="small-title u-small-title-margin">
-                    <SmallTitle icon={school} title={'Work Experience'} />
+                    <SmallTitle icon={school} title={'Educational Qualifications'} />
                 </div>
                 <div className='resume-content'>
                     <ResumeItem 
-                        year = {'2015-Present'}
-                        title = {'Full Stack Developer'}
-                        subTitle = {'Sussex University'}
-                        text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
+                        year = {'2020 - Present'}
+                        title = {'Associate Android Development'}
+                        subTitle = {'Grow with Google'}
+                        text = {'Using Googles\'s structured learning to study android development in Kotlin and Java'} 
+                    />
                     <ResumeItem 
-                        year = {'2015-2020'}
-                        title = {'Computer Science Teacher'}
-                        subTitle = {'Microsoft Studios'}
-                        text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
-                    
+                        year = {'2017 - Present'}
+                        title = {'Full Stack Development'}
+                        subTitle = {'FreeCodeCamp'}
+                        text = {'Using FreeCodeCamp\'s structured learning to study front end development, React, back end development with Node, database design with NoSQL and SQL, and scientific computing with Python'} 
+                        link = {"https://www.freecodecamp.org/spydirwebb"}
+                    />
                     <ResumeItem 
-                        year = {'2010-2017'}
-                        title = {'User Interface Designer'}
-                        subTitle = {'Google Inc'}
-                        text = {'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed feugiat elit vitae molestie molestie. Curabitur scelerisque euismod euismod. Donec ultrices'} />
+                        year = {'2018 - Present'}
+                        title = {'Language Proficiencies'}
+                        subTitle = {'codecademy'}
+                        text = {'Using Codecademy\'s structured learning to learn Python, Java, and practice other skills'} 
+                        link ={"https://www.codecademy.com/profiles/Spydirwebb89"}
+                    />
+                    <ResumeItem 
+                        year = {'2009'}
+                        title = {'Computer Science'}
+                        subTitle = {'University of Nevada Reno'}
+                        text = {'Learned C++ while studying computer science as part of electrical engineering program'} 
+                    />
                 </div>
             </InnerLayout>
         </ResumeStyled> 
