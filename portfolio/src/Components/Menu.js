@@ -26,6 +26,7 @@ const Menu = ({menuItem}) => {
                             </div>
                             <h6>{item.title}</h6>
                             <p>{item.text}</p>
+                            <p className="tags">{(item.tags).map(tag=> tag+" ")}</p>
                         </div>
                     </div>
                 })
@@ -51,6 +52,9 @@ const MenuItemStyled = styled.div`
             overflow: hidden;
             h6{
                 font-size: 1.5rem;
+            }
+            .tags{
+                font-size: .75rem;
             }
             img{
                 width: 100%;

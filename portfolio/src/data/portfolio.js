@@ -4,10 +4,15 @@ import react1 from '../img/portImages/react_styled.png';
 import img2 from '../img/portImages/maya-4.jpg';
 import img3 from '../img/portImages/maya-3.jpg';
 
+const React = 'ReactJS'
+const CSS = 'CSS'
+const Python = 'Python'
+
 const portfolios = [
     {
         id: 1,
-        category: 'CSS',
+        category: ['CSS', 'Python', React],
+        tags: ['this', 'that', 'other'],
         image: css1,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
@@ -17,6 +22,7 @@ const portfolios = [
     {
         id: 2,
         category: 'Python',
+        tags: ['this', 'that', 'other'],
         image: img3,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
@@ -26,6 +32,7 @@ const portfolios = [
     {
         id: 3,
         category: 'Javascript',
+        tags: ['this', 'that', 'other'],
         image: img3,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
@@ -35,6 +42,7 @@ const portfolios = [
     {
         id: 5,
         category: 'Animation',
+        tags: ['this', 'that', 'other'],
         image: img2,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
@@ -44,6 +52,7 @@ const portfolios = [
     {
         id: 6,
         category: 'React JS',
+        tags: ['this', 'that', 'other'],
         image: react1,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
@@ -53,6 +62,7 @@ const portfolios = [
     {
         id: 7,
         category: 'CSS',
+        tags: ['this', 'that', 'other'],
         image: css2,
         link1: 'https://www.google.com',
         link2: 'https://www.google.com',
