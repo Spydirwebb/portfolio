@@ -124,7 +124,7 @@ const NavigationStyled = styled.nav`
                 display: flex;
                 align-items: center;
                 font-size: 1.7rem;
-                color: var(--white-color);
+                color: var(--font-light-color);
             }
         }
     }

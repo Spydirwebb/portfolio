@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { MainLayout, InnerLayout } from "../styles/Layouts"
 import Title from '../Components/Title'
+import TagSearch from '../Components/TagSearch'
 //import portfolios from '../data/portfolio'
 import portfolios from '../data/portfolio2'
 import Menu from '../Components/Menu'
@@ -12,6 +13,7 @@ const allButtons = ['All', ...new Set(portfolios.flatMap(items => items.category
 const PortfolioPage = () => {
     const [menuItem, setMenuItems] = useState(portfolios);
     const [button] = useState(allButtons);
+    const [searchTerm, setSearchTerm] = useState("")
     
     const filter = (button) => {
 
@@ -24,17 +26,32 @@ const PortfolioPage = () => {
         setMenuItems(filteredData);
     }
 
+    const searchForTags = (e) => {
+        e.preventDefault();
+        if(searchTerm===""){
+            setMenuItems(portfolios)
+        }else{
+            const filteredData = portfolios.filter(item => item.tags.includes(searchTerm));
+            setMenuItems(filteredData);
+        }
+    }
+
+
     return(
         <MainLayout>
             <Title title={'Portfolio'} span={'Portfolio'} />
             <InnerLayout>
                 <Button filter={filter} buttons = {button}/>
-                <input type="text" placeholder="Search Tags..." />
+                <TagSearch 
+                    searchTerm={searchTerm} 
+                    setSearchTerm={setSearchTerm} 
+                    searchForTags={searchForTags} />
                 <Menu menuItem={menuItem} />
             </InnerLayout>
         </MainLayout>
     )
 
 }
+
 
 export default PortfolioPage

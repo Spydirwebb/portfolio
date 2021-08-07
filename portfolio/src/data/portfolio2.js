@@ -34,7 +34,7 @@ const portfolios = [
     },
     {
         id: 2,
-        category: [React],
+        category: [React, CSS],
         tags: [React, CSS, Hooks],
         image: img3,
         link1: 'https://github.com/Spydirwebb/Complex-todo-app',
