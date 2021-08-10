@@ -25,8 +25,12 @@ const Menu = ({menuItem}) => {
                                 </ul>
                             </div>
                             <h6>{item.title}</h6>
-                            <p>{item.text}</p>
-                            <p className="tags">{(item.tags).map(tag=> tag+" ")}</p>
+                            <p className="description">{item.text}</p>
+                            {(item.tags).map(tag=> {
+                                return <div className="tags">
+                                            <p>{tag} </p>
+                                        </div>    
+                            })}
                         </div>
                     </div>
                 })
@@ -53,8 +57,19 @@ const MenuItemStyled = styled.div`
             h6{
                 font-size: 1.5rem;
             }
+            .description{
+                padding-bottom: .5rem;
+            }
             .tags{
-                font-size: .75rem;
+                display: inline-flex;
+                width: fit-content;
+                margin-right: 1rem;
+                p{    
+                    font-size: .75rem;
+                    background-color: var(--background-dark-grey);
+                    border: 1px solid var(--border-color); 
+                    padding: .15rem;
+                }
             }
             img{
                 width: 100%;

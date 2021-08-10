@@ -4,6 +4,7 @@ import react1 from '../img/portImages/react_styled.png';
 import img2 from '../img/portImages/maya-4.jpg';
 import img3 from '../img/portImages/maya-3.jpg';
 import evernote from '../img/portImages/evernote_image.png'
+import stock from '../img/portImages/Stock-Bot--1-.png'
 
 const React = "ReactJS"
 const CSS = "CSS"
@@ -20,6 +21,7 @@ const Sprite = "Sprite"
 const Node = "NodeJS"
 const FullStack = "FullStack"
 const graphQL = 'graphQL'
+const API = "API"
 
 const portfolios = [
     {
@@ -45,8 +47,8 @@ const portfolios = [
     {
         id: 3,
         category: [Python],
-        tags: [Python, Alpaca, Telegram, Stocks],
-        image: img3,
+        tags: [Python, Alpaca, Telegram, Stocks, API],
+        image: stock,
         link1: 'https://github.com/Spydirwebb/stocks',
         link2: 'https://www.google.com',
         title: 'Automated Stock Bot',
