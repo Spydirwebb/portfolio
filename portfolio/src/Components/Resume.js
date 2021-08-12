@@ -20,13 +20,13 @@ const Resume = () => {
                 <div className='resume-content'>
                     <ResumeItem 
                         year = {'2020 - Present'}
-                        title = {'Database Administrator/Clinical Research Coordinator'}
+                        title = {'Database Administrator/ Clinical Research Coordinator'}
                         subTitle = {'Renown Health'}
                         text = {'Created programs to reduce errors and redundant work by 300%. Spearheaded digitization of research charts for more accurate data analytics. Administrated database of patient information'} 
                     />
                     <ResumeItem 
                         year = {"2020"}
-                        title = {"Project Manager/Clinical Reseach Coordinator"}
+                        title = {"Project Manager/ Clinical Reseach Coordinator"}
                         subTitle = {"Allied Clinical Research"}
                         text = {"Increased recruitment of subjects by 150% using database queries. Reduced need of sponsor oversight with automated reporting systems"}
                     />
