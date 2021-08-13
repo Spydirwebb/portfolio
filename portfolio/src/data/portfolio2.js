@@ -1,10 +1,7 @@
-import css1 from '../img/portImages/cv_css.png';
-import css2 from '../img/portImages/ms.png';
-import react1 from '../img/portImages/react_styled.png';
-import img2 from '../img/portImages/maya-4.jpg';
-import img3 from '../img/portImages/maya-3.jpg';
 import evernote from '../img/portImages/evernote_image.png'
 import stock from '../img/portImages/Stock-Bot--1-.png'
+import todo from '../img/portImages/todo.png'
+import instagram from '../img/portImages/instagram.png'
 
 const React = "ReactJS"
 const CSS = "CSS"
@@ -38,7 +35,7 @@ const portfolios = [
         id: 2,
         category: [React, CSS],
         tags: [React, CSS, Hooks],
-        image: img3,
+        image: todo,
         link1: 'https://github.com/Spydirwebb/Complex-todo-app',
         link2: 'https://www.google.com',
         title: 'Complex Todo App',
@@ -58,7 +55,7 @@ const portfolios = [
         id: 5,
         category: [React, CSS, Node],
         tags: [React, CSS, Sprite, Node, FullStack, graphQL],
-        image: img2,
+        image: instagram,
         link1: 'https://github.com/Spydirwebb/instaclone',
         link2: 'https://www.google.com',
         title: 'Instagram Clone',

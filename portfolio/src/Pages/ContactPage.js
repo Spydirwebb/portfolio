@@ -162,7 +162,7 @@ const ContactPage = () => {
                                     <button type='submit'><PrimaryButton title="Send Email"/></button>
                                 </div>
                             </form>
-                            <div >{isSent ?  <p className="form-message">Message Sent</p> : <p className="form-message">Message Sent</p>}</div>
+                            <div >{isSent ?  <p className="form-message">Message Sent!</p> : <div></div>}</div>
                         </div>
                         {width>breakPoint ? <DesktopContact /> : <MobileContact />}
                     </InnerLayout>
@@ -239,6 +239,8 @@ const ContactPage2Styled = styled.section`
         }
         .form-message{
                 margin-top: 1rem;
+                font-style: italic;
+                color: chartreuse(--white-color);
             }
     }
 `;
