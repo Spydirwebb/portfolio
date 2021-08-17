@@ -81,7 +81,7 @@ const Navigation = ({toggleTheme}) => {
                 
             </ul>
             <footer className="footer">
-                <p>@2021 Jeff Webb's Portfolio Website</p>
+                <p>@2021 Jeff Webb's Portfolio Website V1.2</p>
             </footer>
         </NavigationStyled>
     )

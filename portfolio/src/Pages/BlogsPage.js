@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Blogs from "../data/blogs"
+//import Blogs from "../data/blogs"
 import Title from '../Components/Title'
 import {MainLayout, InnerLayout} from '../styles/Layouts'
 
