@@ -56,7 +56,7 @@ const App = () => {
                     <Route path="/resume" exact>
                         <ResumePage />
                     </Route>
-                    <Route path="/portfolio" exact>
+                    <Route path="/portfolios" exact>
                         <PortfolioPage />
                     </Route>
                     <Route path="/blogs" exact>

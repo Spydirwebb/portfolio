@@ -29,7 +29,7 @@ const BookSection = () => {
 const BookSectionStyled = styled.div`
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 2rem;
+    grid-gap: 1.5rem;
     @media screen and (max-width: 920px){
         grid-template-columns: repeat(3, 1fr);
     }

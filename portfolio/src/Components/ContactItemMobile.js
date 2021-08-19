@@ -49,6 +49,8 @@ const ContactItemStyled = styled.div`
         }
         p{
             text-align: center;
+            font-size: 1rem;
+            padding: .5rem;
         }
     }
 `;

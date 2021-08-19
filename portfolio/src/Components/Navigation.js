@@ -67,7 +67,7 @@ const Navigation = ({toggleTheme}) => {
                     <NavLink to="/resume" activeClassName="active-class">Resume</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/portfolio" activeClassName="active-class">Portfolio</NavLink>
+                    <NavLink to="/portfolios" activeClassName="active-class">Portfolio</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/blogs" activeClassName="active-class">Blogs</NavLink>
@@ -96,6 +96,9 @@ const NavigationStyled = styled.nav`
     height: 100%;
     width: 100%;
     border-right: 1px solid var(--border-color);
+    @media screen and (max-height: 645px){
+        overflow: scroll;
+    }
     .avatar{
         width: 100%;
         border-bottom: 1px solid var(--border-color);
