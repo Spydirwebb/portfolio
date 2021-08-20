@@ -58,19 +58,19 @@ const Navigation = ({toggleTheme}) => {
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
-                    <NavLink to="/" activeClassName="active-class" exact>Home</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/"} activeClassName="active-class" exact>Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/about" activeClassName="active-class">About</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/about"} activeClassName="active-class">About</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/resume" activeClassName="active-class">Resume</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/resume"} activeClassName="active-class">Resume</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/portfolios" activeClassName="active-class">Portfolio</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/portfolios"} activeClassName="active-class">Portfolio</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/blogs" activeClassName="active-class">Blogs</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/blogs"} activeClassName="active-class">Blogs</NavLink>
                 </li>
                 <li className="nav-item">
                     <NavLink to="/library" activeClassName="active-class">Library</NavLink>
