@@ -47,25 +47,25 @@ const App = () => {
                     <div className="line-4"></div>
                 </div>
                 <Switching>
-                    <Route path="/" exact>
+                    <Route path={process.env.PUBLIC_URL + "/"} exact>
                         <HomePage />
                     </Route>
-                    <Route path="/about" exact>
+                    <Route path={process.env.PUBLIC_URL +"/about"} exact>
                         <AboutPage />
                     </Route>
-                    <Route path="/resume" exact>
+                    <Route path={process.env.PUBLIC_URL +"/resume"} exact>
                         <ResumePage />
                     </Route>
-                    <Route path="/portfolios" exact>
+                    <Route path={process.env.PUBLIC_URL +"/portfolios"} exact>
                         <PortfolioPage />
                     </Route>
-                    <Route path="/blogs" exact>
+                    <Route path={process.env.PUBLIC_URL +"/blogs"} exact>
                         <BlogsPage />
                     </Route>
-                    <Route path="/library" exact>
+                    <Route path={process.env.PUBLIC_URL +"/library"} exact>
                         <LibraryPage />
                     </Route>
-                    <Route path="/contact" exact>
+                    <Route path={process.env.PUBLIC_URL +"/contact"} exact>
                         <ContactPage />
                     </Route>
                   </Switching>
