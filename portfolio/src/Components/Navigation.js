@@ -73,10 +73,10 @@ const Navigation = ({toggleTheme}) => {
                     <NavLink to={process.env.PUBLIC_URL +"/blogs"} activeClassName="active-class">Blogs</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/library" activeClassName="active-class">Library</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/library"} activeClassName="active-class">Library</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to="/contact" activeClassName="active-class">Contact</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/contact"} activeClassName="active-class">Contact</NavLink>
                 </li>
                 
             </ul>
