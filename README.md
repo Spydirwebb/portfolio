@@ -2,3 +2,8 @@
 
 # portfolio
 Portfolio page
+ToDo:
+1)find out how to make menu close after clicking on a link (link in self taught FB comments)
+2)remove age in bio
+3)change "Library" to "Recommended Books" or drop library entirely
+4)Add call to action to landing Page ("Check out my Portfolio Here", or "Click menu for options")
