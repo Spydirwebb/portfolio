@@ -5,7 +5,7 @@ Portfolio page
 ToDo:
 <ol>
 1)find out how to make menu close after clicking on a link (link in self taught FB comments) 
-2)remove age in bio
-3)change "Library" to "Recommended Books" or drop library entirely
+2)remove age in bio - removed
+3)change "Library" to "Recommended Books" or drop library entirely - removed link to library, but library still exists if you know the endpoint
 4)add call to action to landing Page ("Check out my Portfolio Here", or "Click menu for options")
 5)remove years of experience and just keep known languages
