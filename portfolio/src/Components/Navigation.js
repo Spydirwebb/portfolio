@@ -72,9 +72,10 @@ const Navigation = ({toggleTheme}) => {
                 <li className="nav-item">
                     <NavLink to={process.env.PUBLIC_URL +"/blogs"} activeClassName="active-class">Blogs</NavLink>
                 </li>
+                {/*
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/library"} activeClassName="active-class">Library</NavLink>
-                </li>
+                    <NavLink to={process.env.PUBLIC_URL +"/books"} activeClassName="active-class">Library</NavLink>
+                </li> */}
                 <li className="nav-item">
                     <NavLink to={process.env.PUBLIC_URL +"/contact"} activeClassName="active-class">Contact</NavLink>
                 </li>

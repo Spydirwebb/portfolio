@@ -23,14 +23,12 @@ const ImageSection = () => {
                 <div className="about-info">
                     <div className="info-title">
                         <p>Full Name</p>
-                        <p>Age</p>  
                         <p>Languages</p>
                         <p>Location</p>
                         <p>Service</p>
                     </div>
                     <div className="info">
-                        <p>: Jeff Webb</p>
-                        <p>: 31</p>  
+                        <p>: Jeff Webb</p> 
                         <p>: English, Italian</p>
                         <p>: Reno, Nevada</p>
                         <p>: Freelance</p>
