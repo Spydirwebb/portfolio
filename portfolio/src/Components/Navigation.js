@@ -8,8 +8,9 @@ import { withStyles } from '@material-ui/core/styles'
 import Brightness6Icon from '@material-ui/icons/Brightness6';
 import Switch from '@material-ui/core/Switch';
 
-const Navigation = ({toggleTheme}) => {
+const Navigation = ({toggleTheme, setNavToggle}) => {
     const [checked, setChecked] = useState(false)
+    //const [isMenuOpen, setIsMenuOpen] = useState(true)
 
     const handleToggle = () => {
         toggleTheme();
@@ -58,31 +59,31 @@ const Navigation = ({toggleTheme}) => {
             </div>
             <ul className="nav-items">
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/"} activeClassName="active-class" exact>Home</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/"} activeClassName="active-class" exact onClick={()=>setNavToggle(false)}>Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/about"} activeClassName="active-class">About</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/about"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>About</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/resume"} activeClassName="active-class">Resume</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/resume"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>Resume</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/portfolios"} activeClassName="active-class">Portfolio</NavLink>
-                </li>
-                <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/blogs"} activeClassName="active-class">Blogs</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/portfolios"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>Portfolio</NavLink>
                 </li>
                 {/*
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/books"} activeClassName="active-class">Library</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/blogs"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>Blogs</NavLink>
+                </li>
+                <li className="nav-item">
+                    <NavLink to={process.env.PUBLIC_URL +"/books"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>Library</NavLink>
                 </li> */}
                 <li className="nav-item">
-                    <NavLink to={process.env.PUBLIC_URL +"/contact"} activeClassName="active-class">Contact</NavLink>
+                    <NavLink to={process.env.PUBLIC_URL +"/contact"} activeClassName="active-class" onClick={()=>setNavToggle(false)}>Contact</NavLink>
                 </li>
                 
             </ul>
             <footer className="footer">
-                <p>@2021 Jeff Webb's Portfolio Website V1.2</p>
+                <p>&copy; 2021 Jeff Webb's Portfolio Website V1.2</p>
             </footer>
         </NavigationStyled>
     )
@@ -183,7 +184,7 @@ const NavigationStyled = styled.nav`
         width: 100%;
         p{
             padding: 2rem 0;
-            font-size: 1.1rem;
+            font-size: 0.9rem;
             display: block;
             text-align: center;
             @media screen and (max-height: 620px){

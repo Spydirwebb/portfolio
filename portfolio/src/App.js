@@ -33,7 +33,7 @@ const App = () => {
 
   return (
         <div className="App">
-            <Sidebar navToggle={navToggle} toggleTheme={toggleTheme}/>
+            <Sidebar navToggle={navToggle} toggleTheme={toggleTheme} setNavToggle={setNavToggle}/>
             <div className="hamburger-menu">
                 <IconButton onClick={()=>setNavToggle(!navToggle)}>
                     <MenuIcon />
