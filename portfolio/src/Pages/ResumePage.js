@@ -1,12 +1,12 @@
 import React from 'react'
-import Skills from '../Components/Skills'
+import Skills2 from '../Components/Skills2'
 import { MainLayout } from '../styles/Layouts'
 import Resume from '../Components/Resume'
 
 const ResumePage = () => {
     return(
         <MainLayout>
-            <Skills />
+            <Skills2 />
             <Resume />
         </MainLayout>
     )

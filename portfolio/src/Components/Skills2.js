@@ -2,11 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
-import DevIcon from 'devicon-react-svg'
+import DevIcon from '../img/svg/DevIcon'
+import DevIconFilled from '../img/svg/DevIconFilled'
 
 
 
 const Skills2 = () => {
+    
     return(
         <Skills2Styled>
             <Title title={'My Skills'} span={'Skills'} />
@@ -19,12 +21,24 @@ const Skills2 = () => {
                     <DevIcon icon='css3' />
                     <DevIcon icon='javascript' />
                     <DevIcon icon='react' />
-                    <DevIcon icon='nodejs_small' />
+                    <DevIcon icon='nodejs' />
                     <DevIcon icon='python' />
                     <DevIcon icon='django' />
                     <DevIcon icon='java' />
                     <DevIcon icon='android' />
                     <DevIcon icon='mongodb' />
+                </div>
+                <div className="skills">
+                    <DevIconFilled icon='html5' />
+                    <DevIconFilled icon='css3' />
+                    <DevIconFilled icon='javascript' />
+                    <DevIconFilled icon='react' />
+                    <DevIconFilled icon='nodejs' />
+                    <DevIconFilled icon='python' />
+                    <DevIconFilled icon='django' />
+                    <DevIconFilled icon='java' />
+                    <DevIconFilled icon='android' />
+                    <DevIconFilled icon='mongodb' />
                 </div>
             </InnerLayout>
         </Skills2Styled>
@@ -33,6 +47,13 @@ const Skills2 = () => {
 }
 
 const Skills2Styled = styled.section`
+    .skills{
+        display: flex;
+        justify-content: space-between;
+        svg{
+            width: 3rem;
+        }
+    }
     .language-title{
         display: flex;
         margin-bottom: 3rem;
@@ -58,16 +79,6 @@ const Skills2Styled = styled.section`
             }
         }
     }
-    /*.skills{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-row-gap: 2rem;
-        grid-column-gap: 3rem;
-
-        //@media screen and (max-width: 700px){
-        //    grid-template-columns: repeat(1, 1fr);
-        //}
-    }*/
 `;
 
 export default Skills2

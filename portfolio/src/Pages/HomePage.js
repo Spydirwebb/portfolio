@@ -6,6 +6,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 
 import Particles from '../Components/Particles'
+import DevIcon from '../img/svg/DevIcon';
 
 const HomePage = () => {
     return(
@@ -22,11 +23,14 @@ const HomePage = () => {
                     <a href="https://www.facebook.com/jeff.webb.779/" className="icon i-facebook">
                         <FacebookIcon />
                     </a>
+                    <a href="https://www.linkedin.com/in/jeffery-webb-8780b879/" className="icon i-linkedIn">
+                        <LinkedInIcon />
+                    </a>
                     <a href="https://github.com/Spydirwebb" className="icon i-github">
                         <GithubIcon />
                     </a>
-                    <a href="https://www.linkedin.com/in/jeffery-webb-8780b879/" className="icon i-linkedIn">
-                        <LinkedInIcon />
+                    <a href='https://codepen.io/spydirwebb' className="icon i-codepen">
+                        <DevIcon icon='codepen'/>
                     </a>
                 </div>
             </div>
@@ -76,13 +80,21 @@ const HomePageStyled = styled.header`
                     border: 2px solid #0A66C2;
                     color: #0A66C2;
                 }
-        }
+            }
             .i-github{
                 &:hover{
                     border: 2px solid #5f4687;
                     color: #5f4687;
                 }
-        }      
+            }
+            .i-codepen{
+                fill: var(--font-light-color);
+                width: 2.5rem;
+                &:hover{
+                    border: 2px solid var(--white-color);
+                    fill: var(--white-color);
+                }
+            }      
         }
     }
 
