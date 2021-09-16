@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { InnerLayout } from '../styles/Layouts'
 import Title from './Title'
-import DevIcon from '../img/svg/DevIcon'
+//import DevIcon from '../img/svg/DevIcon'
 import DevIconFilled from '../img/svg/DevIconFilled'
 
 
@@ -14,9 +14,10 @@ const Skills2 = () => {
             <Title title={'My Skills'} span={'Skills'} />
             <InnerLayout>
                 <div className="language-title">
-                    <h3>Language Experience</h3>
+                    <h3 className="title-full">Language Experience</h3>
+                    <h3 className="title-small">Language Exp.</h3>
                 </div>
-                <div className='skills'>
+                {/*<div className='skills'>
                     <DevIcon icon='html5' />
                     <DevIcon icon='css3' />
                     <DevIcon icon='javascript' />
@@ -27,18 +28,19 @@ const Skills2 = () => {
                     <DevIcon icon='java' />
                     <DevIcon icon='android' />
                     <DevIcon icon='mongodb' />
-                </div>
+                </div> /* */}
                 <div className="skills">
                     <DevIconFilled icon='html5' />
                     <DevIconFilled icon='css3' />
                     <DevIconFilled icon='javascript' />
                     <DevIconFilled icon='react' />
                     <DevIconFilled icon='nodejs' />
+                    <DevIconFilled icon='mongodb' />
                     <DevIconFilled icon='python' />
                     <DevIconFilled icon='django' />
                     <DevIconFilled icon='java' />
                     <DevIconFilled icon='android' />
-                    <DevIconFilled icon='mongodb' />
+                    
                 </div>
             </InnerLayout>
         </Skills2Styled>
@@ -48,8 +50,20 @@ const Skills2 = () => {
 
 const Skills2Styled = styled.section`
     .skills{
-        display: flex;
-        justify-content: space-between;
+        padding-top: 1.5rem;
+        justify-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-row-gap: 1.5rem;
+        grid-column-gap: 1rem;
+        
+        @media screen and (max-width: 700px){
+            grid-template-columns: repeat(4, 1fr);
+        }
+        @media screen and (max-width: 500px){
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         svg{
             width: 3rem;
         }
@@ -57,26 +71,20 @@ const Skills2Styled = styled.section`
     .language-title{
         display: flex;
         margin-bottom: 3rem;
-        @media screen and (max-width: 700px){
-            display: block;
-            margin-bottom: 1rem;
+        .title-small{
+            display: none;
+        }
+        @media screen and (max-width: 400px){
+            .title-full{
+                display: none;
+            }
+            .title-small{
+                display: block;
+            }
         }
         h3{
             color: var(--white-color);
             font-size: 2rem;
-        }
-        p{
-            font-size: 1rem;
-            margin-left: 4rem;
-            padding-top: .75rem;
-            @media screen and (max-width: 700px){
-                padding-bottom: 1rem;
-                margin-left: 0rem;
-            }
-            svg{
-                font-size: 1rem;
-                color: var(--primary-color);
-            }
         }
     }
 `;

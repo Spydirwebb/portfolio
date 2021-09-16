@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PersonIcon from '@material-ui/icons/Person';
 
-const ResumeItem = ({year, title, subTitle, text, link}) => {
+const ResumeItem = ({year, title, subTitle, text, link, tags}) => {
     return(
         <ResumeItemStyled>
             <div className='left-content'>
@@ -15,6 +15,11 @@ const ResumeItem = ({year, title, subTitle, text, link}) => {
                     
                 </a>
                 <p>{text}</p>
+                {(tags).map(tag=> {
+                    return <div className="tags">
+                            <p>{tag} </p>
+                        </div>    
+                })}
             </div>
         </ResumeItemStyled>
     )
@@ -87,6 +92,17 @@ const ResumeItemStyled = styled.div`
             vertical-align: bottom;
             font-size: 2rem;
             color: var(--primary-color);
+        }
+        .tags{
+            display: inline-flex;
+            width: fit-content;
+            margin-right: 1rem;
+            p{    
+                font-size: .75rem;
+                background-color: var(--background-dark-grey);
+                border: 1px solid var(--border-color); 
+                padding: .15rem;
+            }
         }
         @media screen and (max-width: 421px){
             padding-left: 1rem;

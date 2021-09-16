@@ -210,21 +210,21 @@ const ContactPage2Styled = styled.section`
                     left: 20px;
                     top: -19px;
                     display: inline-block;
-                    background-color: var(--background-dark-color);
+                    background-color:transparent;
                     padding: 0 .5rem;
                     color: inherit;
                 }
                 input{
                     border: 1px solid var(--border-color);
                     outline: none;
-                    background: transparent;
+                    background: var(--background-dark-grey);
                     height: 50px;
                     padding: 0 15px;
                     width: 100%;
                     color: inherit;
                 }
                 textarea{
-                    background-color: transparent;
+                    background-color: var(--background-dark-grey);
                     border: 1px solid var(--border-color);
                     outline: none;
                     color: inherit;

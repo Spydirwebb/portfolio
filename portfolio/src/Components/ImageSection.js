@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 //import beardedBW from '../img/beardedBW.jpg'
-import meBW from '../img/me_bw.jpg'
+
 import resume from '../img/resume/webb.resume.dev.pdf'
 import PrimaryButton from './PrimaryButton'
 
@@ -9,7 +9,7 @@ const ImageSection = () => {
     return(
         <ImageSectionStyled>
             <div className="left-content">
-                <img src={meBW} alt="resume" />
+                <img src={'https://res.cloudinary.com/dnj1iwchc/image/upload/v1631771200/me_bw_k6bg5y.jpg'} alt="resume" />
             </div>
             <div className="right-content">
                 <h4>I am <span>Jeff Webb</span></h4>
@@ -31,7 +31,7 @@ const ImageSection = () => {
                         <p>: Jeff Webb</p> 
                         <p>: English, Italian</p>
                         <p>: Reno, Nevada</p>
-                        <p>: Freelance</p>
+                        <p>: For Hire, Freelance</p>
                     </div>
                 </div>
                 <a href={resume} target='_blank' rel='noopener noreferrer'>

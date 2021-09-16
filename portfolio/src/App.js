@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Route, Switch as Switching } from 'react-router-dom'
+import { Route, Switch as Switching} from 'react-router-dom'
 import { useEffect, useState } from 'react'
 //components
 import Sidebar from './Components/Sidebar'

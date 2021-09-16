@@ -4,9 +4,10 @@ import FacebookIcon from '@material-ui/icons/Facebook'
 import GithubIcon from '@material-ui/icons/GitHub'
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-
 import Particles from '../Components/Particles'
 import DevIcon from '../img/svg/DevIcon';
+import PrimaryButton from '../Components/PrimaryButton';
+
 
 const HomePage = () => {
     return(
@@ -19,20 +20,29 @@ const HomePage = () => {
                 <p>Full-Stack Web Developer</p>
                 <p>Mobile App Developer</p>
                 <p>Python Software Developer</p>
+                <div className="buttons">
+                    <a  href={process.env.PUBLIC_URL +"/portfolios"}>
+                        <PrimaryButton title={'See my projects'} />
+                    </a>
+                </div>
+                <p className='subtitle sm-screen'>Or Open the Menu To See More</p>
+                <p className='subtitle'>Find Me Around The Web</p>
                 <div className="icons">
-                    <a href="https://www.facebook.com/jeff.webb.779/" className="icon i-facebook">
-                        <FacebookIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/jeffery-webb-8780b879/" className="icon i-linkedIn">
-                        <LinkedInIcon />
-                    </a>
+                    
                     <a href="https://github.com/Spydirwebb" className="icon i-github">
                         <GithubIcon />
                     </a>
                     <a href='https://codepen.io/spydirwebb' className="icon i-codepen">
                         <DevIcon icon='codepen'/>
                     </a>
+                    <a href="https://www.facebook.com/jeff.webb.779/" className="icon i-facebook">
+                        <FacebookIcon />
+                    </a>
+                    <a href="https://www.linkedin.com/in/jeffery-webb-8780b879/" className="icon i-linkedIn">
+                        <LinkedInIcon />
+                    </a>
                 </div>
+                
             </div>
         </HomePageStyled>
     )
@@ -51,10 +61,27 @@ const HomePageStyled = styled.header`
         transform: translate(-50%, -50%);
         text-align: center;
         width: 80%;
+        .buttons{
+            margin: 1rem;
+        }
+        .subtitle{
+            font-size: .75rem;
+            margin-top: 1rem;
+        }
+        .sm-screen{
+            display:none;
+            font-size: 0.8rem;
+        }
+        @media screen and (max-width:1200px){
+            .sm-screen{
+                display: inherit;
+            }
+        }
         .icons{
             display: flex;
             justify-content: center;
-            margin-top: 1rem;
+            margin-top: .5rem;
+            margin-bottom: 1.5rem;
             .icon{
                 border: 2px solid var(--border-color);
                 display: flex;

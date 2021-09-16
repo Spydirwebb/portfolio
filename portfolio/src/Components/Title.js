@@ -35,16 +35,16 @@ const TitleStyled = styled.div`
             border-radius: 15px;
             left: 0;
         }
-        &::after{
+        /*&::after{
             content: "";
             position: absolute;
             bottom: 0;
             width: 3.5rem;
             height: .33rem;
-            background-color: var(--primary-color);
+            //background-color: var(--primary-color);
             border-radius: 15px;
             left: 0;
-        }
+        }*/
         span{
             font-weight: 900;
             color: rgba(25,29,43,.44);
